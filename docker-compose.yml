@@ -53,6 +53,8 @@ services:
       - .env
     networks:
       - nesjs-network
+    ports:
+      - "5050:80"
   nginx:
     image: nginx:stable-alpine
     container_name: nginx
@@ -64,6 +66,7 @@ services:
       - BACKEND_PORT=${BACKEND_PORT}
     ports:
       - 80:${NGINX_PORT}
+      - 5050:5050
     depends_on:
       - api
       - postgres
