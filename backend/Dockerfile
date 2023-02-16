@@ -7,6 +7,7 @@ COPY package*.json ./
 RUN npm install
 
 RUN npm install glob rimraf
+RUN npm install glob socket.io
 
 COPY . .
 
