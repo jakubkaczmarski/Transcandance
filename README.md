@@ -18,5 +18,5 @@ localhost:80/chat.html
 docker-compose down                 
 docker-compose up --build
 
-//To just ran without rebuilding 
+//To just run without rebuilding 
 docker-compose up 
